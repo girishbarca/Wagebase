@@ -1,0 +1,66 @@
+* {
+    font-family: 'Avenir'
+}
+
+.btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-weight: 800;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.btn-small {
+	border-radius: 4px;
+	font-size: 14px;
+	width: 80px;
+	height: 35px;
+}
+
+.btn-large {
+	padding: 10px 35px;
+	border-radius: 5px;
+	font-size: 18px;
+	width: 80px;
+}
+
+.btn-primary {
+	background: #28AFB0;
+}
+
+.btn-secondary {
+	background: #19647E;
+}
+
+.btn-tertiary {
+	background: #DDCECD;
+}
+
+.btn:hover {opacity: 0.8}
+
+a {
+	text-decoration-line: underline;
+	color: #28AFB0;
+	font-family: Avenir;
+	font-style: normal;
+	font-weight: 800;
+	cursor: pointer;
+	transition: 0.3s;
+}
+a:hover {
+	opacity: 0.8
+}
+
+.btn-group {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn-group > * {
+	margin-right: 5px;
+}
