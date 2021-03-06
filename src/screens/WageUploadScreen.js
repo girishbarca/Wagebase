@@ -99,9 +99,9 @@ const WageUploadScreen = (props) => {
               onSelect={(val) => setLocation(val)}
             />
           </div>
-          <div className="next-btn-holder">
+          <div className="next-custom-btn-holder">
             <div
-              className="btn btn-primary btn-small"
+              className="custom-btn custom-btn-primary custom-btn-small"
               onClick={() => {
                 if (restName && location) {
                   setStatus(2);
@@ -148,16 +148,16 @@ const WageUploadScreen = (props) => {
               />
             </div>
           </div>
-          <div className="next-btn-holder">
-            <div className="btn-group">
+          <div className="next-custom-btn-holder">
+            <div className="custom-btn-group">
               <div
-                className="btn btn-tertiary btn-small"
+                className="custom-btn custom-btn-tertiary custom-btn-small"
                 onClick={() => setStatus(1)}
               >
                 Back
               </div>
               <div
-                className="btn btn-primary btn-small"
+                className="custom-btn custom-btn-primary custom-btn-small"
                 onClick={() => {
                   if (wage) {
                     setStatus(3);
