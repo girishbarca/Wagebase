@@ -1,14 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import HomeScreen from './screens/HomeScreen'
-import SearchResultsScreen from './screens/SearchResultsScreen';
-import SkeletonScreen from './screens/SkeletonScreen'
-import WageUploadScreen from './screens/WageUploadScreen'
+import HomeScreen from "./screens/HomeScreen";
+import SearchResultsScreen from "./screens/SearchResultsScreen";
+import WageUploadScreen from "./screens/WageUploadScreen";
 
 class App extends Component {
   render() {
     return (
-      <SearchResultsScreen/>
+      <Router>
+        <Switch>
+          <Route path="/share" children={<WageUploadScreen />} />
+          <Route
+            path="/search/:searchTerm"
+            children={<SearchResultsScreen />}
+          />
+          <Route path="/" children={<HomeScreen />} />
+        </Switch>
+      </Router>
     );
   }
 }

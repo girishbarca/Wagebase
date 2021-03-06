@@ -42,6 +42,10 @@
 .btn:hover {opacity: 0.8}
 
 a {
+	text-decoration: none;
+}
+
+.standalone-link {
 	text-decoration-line: underline;
 	color: #28AFB0;
 	font-family: Avenir;
@@ -50,7 +54,8 @@ a {
 	cursor: pointer;
 	transition: 0.3s;
 }
-a:hover {
+
+.standalone-link:hover {
 	opacity: 0.8
 }
 

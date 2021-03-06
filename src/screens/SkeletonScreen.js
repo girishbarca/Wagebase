@@ -1,45 +1,58 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 
-import logo from'../img/logo.svg';
-import search from'../img/search.svg';
+import logo from "../img/logo.svg";
+import search from "../img/search.svg";
 
-import './css/SkeletonScreen.css'
-import '../common.css'
+import "./css/SkeletonScreen.css";
+import "../common.css";
 
 const SkeletonScreen = (props) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const history = useHistory();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    history.push(`/search/${searchTerm}`);
+  };
+
   return (
     <div className="full-screen">
       <div className="top-search-bar">
         <div className="logo-holder">
-          <img src={logo} className="small-logo" alt="Wagebase Logo"/>
+          <Link to="/">
+            <img src={logo} className="small-logo" alt="Wagebase Logo" />
+          </Link>
         </div>
-        <form className="small-search-form">
+        <form className="small-search-form" onSubmit={(e) => handleSubmit(e)}>
           <div className="small-search-bar">
-            <input className="search-input" type="text"
-              placeholder={"e.g. Zareen’s Restaurant, Palo Alto"}/>
-            <img src={search} className="search-icon" alt="Search"/>
+            <input
+              className="search-input"
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder={"e.g. Zareen’s Restaurant, Palo Alto"}
+            />
+            <img src={search} className="search-icon" alt="Search" />
           </div>
           <div className="btn-group">
-            <div onClick={()=>console.log("navigate to search")} className="btn btn-primary btn-small">
-              Search
-            </div>
-            <div className="btn btn-secondary btn-small">
-              Compare
-            </div>
+            <Link to={`/search/${searchTerm}`}>
+              <div className="btn btn-primary btn-small">Search</div>
+            </Link>
+
+            <Link to={`/compare/${searchTerm}`}>
+              <div className="btn btn-secondary btn-small">Compare</div>
+            </Link>
           </div>
         </form>
       </div>
-      <div className="screen-children">
-        {props.children}
-      </div>
+      <div className="screen-children">{props.children}</div>
       <div className="bottom-bar">
-        <img src={logo} className="small-logo" alt="Wagebase Logo"/>
-        <div className="rights-text">
-          2021 WageBase - All Rights Reserved
-        </div>
+        <img src={logo} className="small-logo" alt="Wagebase Logo" />
+        <div className="rights-text">2021 WageBase - All Rights Reserved</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SkeletonScreen
+export default SkeletonScreen;
