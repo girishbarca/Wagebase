@@ -20,7 +20,7 @@ const SkeletonScreen = (props) => {
             <img src={search} className="search-icon" alt="Search"/>
           </div>
           <div className="btn-group">
-            <div className="btn btn-primary btn-small">
+            <div onClick={()=>console.log("navigate to search")} className="btn btn-primary btn-small">
               Search
             </div>
             <div className="btn btn-secondary btn-small">
