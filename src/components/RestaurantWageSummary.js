@@ -54,7 +54,6 @@ const RoleSummary = (props) => {
 const RestaurantWageSummary = (props) => {
   return (
     <div>
-      {" "}
       <div className="wage-summary-container">
         <div className="avg-wage-bar">
           <Row className="avg-wage-figure">{`${props.wage}/hr`}</Row>

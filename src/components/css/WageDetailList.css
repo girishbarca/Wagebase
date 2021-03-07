@@ -1,0 +1,70 @@
+.wage-list-container {
+  margin: 3em;
+}
+
+.wage-list-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.wage-list-table {
+  margin-top: 2em;
+  width: 100%;
+}
+
+.wage-list-table-header {
+  background-color: #19647e;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.wage-list-table-header-cell {
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.wage-list-table-data-row-primary {
+  background-color: #eee5e5;
+}
+
+.wage-list-table-data-row-secondary {
+  background-color: #fafafa;
+}
+
+.wage-list-table-data-cell {
+  padding: 20px;
+  padding-left: 30px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.role-row {
+  width: 50%;
+}
+
+th {
+  font-weight: 200;
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 20px;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.list-icon {
+  margin-top: -3px;
+}
+
+.horizontal-spacer {
+  padding: 7px;
+}
