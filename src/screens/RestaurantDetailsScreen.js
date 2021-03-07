@@ -8,6 +8,7 @@ import SkeletonScreen from "./SkeletonScreen";
 import { REST_DATA } from "../data/mock";
 
 import "./css/RestaurantDetailsScreen.css";
+import RestaurantWageSummary from "../components/RestaurantWageSummary";
 
 const RestaurantDetailsScreen = (props) => {
   const { restaurantID } = useParams();
@@ -23,7 +24,9 @@ const RestaurantDetailsScreen = (props) => {
           {/*---remove placeholder and insert graph component---*/}
           <div className="graph-placeholder"></div>
         </Col>
-        <Col xs={12} md={4}></Col>
+        <Col xs={12} md={4}>
+          <RestaurantWageSummary {...currRestaurant} />
+        </Col>
       </Row>
     </SkeletonScreen>
   );
