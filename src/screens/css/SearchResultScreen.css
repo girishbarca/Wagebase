@@ -109,7 +109,7 @@
   font-size: 14px;
 }
 
-.next-btn-holder {
+.next-custom-btn-holder {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;

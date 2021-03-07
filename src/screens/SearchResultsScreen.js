@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import SkeletonScreen from "./SkeletonScreen";
@@ -11,6 +12,8 @@ import "../common.css";
 import arrow from "../img/arrow.svg";
 
 const RestaurantInfo = (props) => {
+  const history = useHistory();
+
   const imgurl =
     props.imgurl ||
     "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80";
@@ -41,14 +44,15 @@ const RestaurantInfo = (props) => {
           height: "100%",
           width: "25%",
           borderRadius: "10px 0px 0px 10px",
+          objectFit: "cover",
         }}
-        alt="Saljuk's Mom"
+        alt="Restaurant Splash"
       />
       <div style={{ width: 20 }}> </div>
-      <div className="restaurant-info-text">
+      <div className="restaurant-info-text" style={{ marginLeft: "1em" }}>
         <div
           className="restaurant-name"
-          style={{ fontSize: "35px", color: "black" }}
+          style={{ fontSize: "35px", color: "black", marginTop: 0 }}
         >
           {name}
         </div>
@@ -92,7 +96,10 @@ const RestaurantInfo = (props) => {
               alignItems: "baseline",
             }}
           >
-            <text className="wage-info" style={{ maxLines: 2 }}>
+            <text
+              className="wage-info"
+              style={{ maxLines: 2, fontWeight: 700 }}
+            >
               {wage}
             </text>
             <text style={{ color: "white", fontSize: 30 }}>/hr</text>
@@ -113,7 +120,7 @@ const RestaurantInfo = (props) => {
         </div>
         <div
           onClick={() => {
-            console.log("hi");
+            history.push(`/restaurant/${props.id}`);
           }}
           style={{
             position: "relative",
@@ -128,7 +135,14 @@ const RestaurantInfo = (props) => {
             display: "flex",
           }}
         >
-          <text style={{ color: "white", fontSize: 20, fontWeight: "bold" }}>
+          <text
+            style={{
+              color: "white",
+              fontSize: 20,
+              fontWeight: "bold",
+              marginLeft: "20px",
+            }}
+          >
             Learn More
           </text>
           <img src={arrow} className="search-icon" alt="learn-more" />

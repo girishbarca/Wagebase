@@ -32,12 +32,16 @@ const HomeScreen = (props) => {
           />
           <img src={search} className="search-icon" alt="Search" />
         </div>
-        <div className="btn-group">
+        <div className="custom-btn-group">
           <Link to={`/search/${searchTerm}`}>
-            <div className="btn btn-primary btn-large">Search</div>
+            <div className="custom-btn custom-btn-primary custom-btn-large">
+              Search
+            </div>
           </Link>
           <Link to={`/compare/${searchTerm}`}>
-            <div className="btn btn-secondary btn-large">Compare</div>
+            <div className="custom-btn custom-btn-secondary custom-btn-large">
+              Compare
+            </div>
           </Link>
         </div>
       </form>

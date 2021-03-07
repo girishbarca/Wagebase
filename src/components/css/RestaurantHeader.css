@@ -1,0 +1,62 @@
+.restaurant-container {
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat; 
+    background-size: auto;
+    background-position: 0 -200px; 
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.55;
+}
+
+.restaurant-details {
+    position: absolute;
+    top: 0;
+    left: 2em;
+    padding: 2em;
+    color: white;
+}
+
+.restaurant-name {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.restaurant-address {
+    font-size: 2em;
+    font-family: 'Montserrat';
+    margin: 0;
+}
+
+.restaurant-description {
+    margin-top: 2em;
+    width: 90%;
+}
+
+.restaurant-ctas {
+    position: absolute;
+    bottom: 4em;
+    left: 3em;
+}
+
+.spacer {
+    margin: 0.5em;
+}
+
+@media screen and (min-width: 992px) {
+    .restaurant-container {
+        height: 270px;
+    }
+
+    .restaurant-ctas {
+        left: auto;
+        right: 0;
+    }
+}
