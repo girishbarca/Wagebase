@@ -61,7 +61,7 @@ const CompSideBar = (props) => {
           />
         </div>
         <div
-          className="btn btn-primary btn-stretch"
+          className="custom-btn custom-btn-primary btn-stretch"
           onClick={() => {
             if (restName && location) {
               props.addRestaurant(restName, location)
@@ -104,7 +104,7 @@ const RestaurantSnippet = (props) => {
       <div className="restaurant-name">
         {name}
       </div>
-      <div className="remove-button btn" onClick={() => props.removeRest(props.idx)}>
+      <div className="remove-button custom-btn" onClick={() => props.removeRest(props.idx)}>
         <img src={remove} className="remove-img" alt="Saljuk's Mom" />
       </div>
     </div>
@@ -132,7 +132,7 @@ const EmptyCompScreen = (props) => {
 }
 
 const CompareScreen = (props) => {
-  const [curRests, setRests] = useState([REST_DATA[0]]);
+  const [curRests, setRests] = useState([]);
 
   const removeRest = (idx) => {
     setRests(curRests.filter((value, index, arr) => {return index !== idx}))
@@ -178,7 +178,7 @@ const inputStyles = {
   fontSize: 18,
   borderRadius: 5,
   padding: "1px 10px",
-  width: "calc(25vw - 20px)",
+  width: "100%",
   boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)"
 };
 

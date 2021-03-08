@@ -109,7 +109,7 @@
 	font-size: 14px;
 }
 
-.next-btn-holder {
+.next-custom-btn-holder {
 	width: 100%;
 	display: flex;
 	flex-direction: row-reverse;
@@ -146,7 +146,7 @@
 	width: 70%;
 }
 
-.restaurant-info-text .restaurant-name {
+.restaurant-info-text .restaurant-info-name {
 	font-weight: 800;
 	font-size: 24px;
 	color: #37392E;
@@ -175,4 +175,3 @@
   	/* bring your own prefixes */
   	transform: translate(-50%, -50%);
 }
-

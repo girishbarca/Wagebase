@@ -15,16 +15,16 @@ const ShareComponent = (props) => {
           Share Graph
         </div>
         <div className="share-icon-row">
-        	<a className="share-icon btn" href="https://www.facebook.com/sharer/sharer.php?u=#url">
+        	<a className="share-icon custom-btn" href="https://www.facebook.com/sharer/sharer.php?u=#url">
         		<img src={fb} className="share-img" alt="Saljuk's Mom" />
         	</a>
-        	<a className="share-icon btn" href="http://twitter.com/share">
+        	<a className="share-icon custom-btn" href="http://twitter.com/share">
         		<img src={twitter} className="share-img" alt="Saljuk's Mom" />
         	</a>
-        	<a className="share-icon btn">
+        	<a className="share-icon custom-btn">
         		<img src={insta} className="share-img" alt="Saljuk's Mom" />
         	</a>
-        	<a className="share-icon btn" href="http://www.reddit.com/submit?url=">
+        	<a className="share-icon custom-btn" href="http://www.reddit.com/submit?url=">
         		<img src={reddit} className="share-img" alt="Saljuk's Mom" />
         	</a>
         </div>

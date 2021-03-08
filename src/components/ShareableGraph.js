@@ -32,10 +32,7 @@ const ShareableGraph = (props) => {
       {
         label: restaurant.name,
         backgroundColor: COLORS[idx % 3 + 1],
-        data: [
-          restaurant.waiter_wage, restaurant.cook_wage,
-          restaurant.chef_wage, restaurant.waiter_wage
-        ]
+        data: restaurant.roleWages.map((wage) => parseFloat(wage.roleAvgWage.substring(1)))
       }
     )
   }

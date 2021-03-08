@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import logo from "../img/logo.svg";
-import logoinv from "../img/logo-invert.svg";
+import invertedLogo from "../img/inverted_logo.svg";
 import search from "../img/search.svg";
 
 import "./css/SkeletonScreen.css";
@@ -36,20 +36,24 @@ const SkeletonScreen = (props) => {
             />
             <img src={search} className="search-icon" alt="Search" />
           </div>
-          <div className="btn-group">
+          <div className="custom-btn-group">
             <Link to={`/search/${searchTerm}`}>
-              <div className="btn btn-primary btn-small">Search</div>
+              <div className="custom-btn custom-btn-primary custom-btn-small">
+                Search
+              </div>
             </Link>
 
             <Link to={`/compare/${searchTerm}`}>
-              <div className="btn btn-secondary btn-small">Compare</div>
+              <div className="custom-btn custom-btn-secondary custom-btn-small">
+                Compare
+              </div>
             </Link>
           </div>
         </form>
       </div>
       <div className="screen-children">{props.children}</div>
       <div className="bottom-bar">
-        <img src={logoinv} className="small-logo" alt="Wagebase Logo" />
+        <img src={invertedLogo} className="small-logo" alt="Wagebase Logo" />
         <div className="rights-text">2021 WageBase - All Rights Reserved</div>
       </div>
     </div>

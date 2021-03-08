@@ -1,0 +1,111 @@
+.wage-summary-container {
+    margin: 5em 4em 1em 0;
+    background: #FAFAFA;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.avg-wage-bar {
+    background-color: #28AFB0;
+    border-radius: 10px 10px 0 0;
+    padding: 2em;
+    color: white;
+}
+
+.avg-wage-figure {
+    font-weight: 800;
+    font-size: 64px;
+    justify-content: center;
+}
+
+.avg-wage-label {
+    font-weight: 300;
+    font-size: 24px;
+    justify-content: center;
+}
+
+.avg-role-wages-list {
+    padding: 1.5em;
+}
+
+.column-heading-row {
+    margin-bottom: 2em;
+}
+
+.column-heading {
+    color: #37392E;
+    opacity: 0.5;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.column-heading-right {
+    text-align: right;
+}
+
+.verification-icon {
+    justify-content: right;
+}
+
+.checkmark-icon {
+    width: 25px;
+    height: 33px;
+}
+
+.questionmark-icon {
+    width: 22px;
+    height: 33px;
+    margin-right: 0.2em;
+}
+
+.learn-more-icon {
+    width: 10px;
+}
+
+.role, .role-wage {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.role-wage {
+    text-align: right;
+    margin-right: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+.role-summary-right-column {
+    justify-content: flex-end;
+    margin-right: 0.1em;
+}
+
+.role-wage-verified-date {
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+.role-wages-learn-more {
+    color: #19647E;
+    font-size: 14px;
+    font-weight: normal;
+    white-space:nowrap;
+}
+
+.role-summary-container {
+    margin-bottom: 1em;
+}
+
+.standalone-learn-more-link {
+    color: #19647E;
+}
+
+.standalone-learn-more-link:hover {
+    text-decoration-line: underline;
+    transition: 0.3s;
+}
+
+.verified-definition {
+    position: absolute;
+    font-weight: normal;
+    font-size: 9px;
+}
