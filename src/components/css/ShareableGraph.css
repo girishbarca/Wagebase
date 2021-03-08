@@ -1,0 +1,27 @@
+.graph-share {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: calc(100vh - 160px);;
+}
+
+.main-graph {
+	margin-bottom: 25px;
+}
+
+.viz-type-holder {
+	width: 800px;
+	margin-bottom: 20px;
+}
+
+.viz-type-label {
+	font-family: Avenir;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: #37392E;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}

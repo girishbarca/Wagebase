@@ -60,7 +60,7 @@ const UploadConfirmationModal = (props) => {
       ) : (
         <div className="email-confirm-done">
           <b> Didn’t receive an email? </b>
-          Click <a>here</a> to resend.
+          Click <a className="standalone-link">here</a> to resend.
         </div>
       )}
     </div>

@@ -330,3 +330,43 @@ export const REST_DATA = [
     ],
   },
 ];
+
+export const REGION_AVG = {
+  "Palo Alto": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "Redwood City": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "Mountain View": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "San Francisco": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "Sunnyvale": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "Stanford": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+
+}

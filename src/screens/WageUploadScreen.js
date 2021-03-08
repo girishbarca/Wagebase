@@ -24,7 +24,7 @@ const RestaurantInfo = (props) => {
     <div className="restaurant-info-master">
       <img src={imgurl} className="restaurant-img" alt="Saljuk's Mom" />
       <div className="restaurant-info-text">
-        <div className="restaurant-name">{name}</div>
+        <div className="restaurant-info-name">{name}</div>
         <div className="restaurant-addr">{addr}</div>
         <div className="restaurant-desc">{desc}</div>
       </div>
@@ -39,7 +39,6 @@ const WageUploadScreen = (props) => {
   const [status, setStatus] = useState(1);
 
   let cities = REST_DATA.map((rest) => rest.city);
-  console.log(cities);
   let rest_names = REST_DATA.map((rest) => rest.name);
   cities = [...new Set(cities)];
   rest_names = [...new Set(rest_names)];

@@ -5,6 +5,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import HomeScreen from "./screens/HomeScreen";
 import RestaurantDetailsScreen from "./screens/RestaurantDetailsScreen";
 import SearchResultsScreen from "./screens/SearchResultsScreen";
+import CompareScreen from "./screens/CompareScreen";
 import WageUploadScreen from "./screens/WageUploadScreen";
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
         <ScrollToTop>
           <Switch>
             <Route path="/share" children={<WageUploadScreen />} />
+            <Route path="/compare" children={<CompareScreen />} />
             <Route
               path="/search/:searchTerm"
               children={<SearchResultsScreen />}
