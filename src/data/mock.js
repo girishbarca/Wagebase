@@ -8,6 +8,10 @@ export const REST_DATA = [
     desc:
       "A small scale pizza joint based in Stanford, CA that is popular with the locals. Winner of best pizza pie for the last 3 years in a row.",
     wage: "$18.40",
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
   },
   {
     name: "Pizza Papa",
@@ -18,6 +22,10 @@ export const REST_DATA = [
     desc:
       "A small scale pizza joint based in Stanford, CA that is popular with the locals. Winner of best pizza pie for the last 3 years in a row.",
     wage: "$22.40",
+    waiter_wage: 19,
+    cook_wage: 18,
+    chef_wage: 17,
+    greeter_wage: 18.5
   },
   {
     name: "Pizza Palace",
@@ -28,6 +36,10 @@ export const REST_DATA = [
     desc:
       "A small scale pizza joint based in Stanford, CA that is popular with the locals. Winner of best pizza pie for the last 3 years in a row.",
     wage: "$23.40",
+    waiter_wage: 17,
+    cook_wage: 16,
+    chef_wage: 15,
+    greeter_wage: 16.5
   },
   {
     name: "Pizzerio",
@@ -38,6 +50,10 @@ export const REST_DATA = [
     desc:
       "A small scale pizza joint based in Stanford, CA that is popular with the locals. Winner of best pizza pie for the last 3 years in a row.",
     wage: "$14.40",
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
   },
   {
     name: "Pizza Parlor",
@@ -48,6 +64,10 @@ export const REST_DATA = [
     desc:
       "A small scale pizza joint based in Stanford, CA that is popular with the locals. Winner of best pizza pie for the last 3 years in a row.",
     wage: "$15.40",
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
   },
   {
     name: "Dominoes Pizza",
@@ -58,5 +78,49 @@ export const REST_DATA = [
     desc:
       "A small scale pizza joint based in Stanford, CA that is popular with the locals. Winner of best pizza pie for the last 3 years in a row.",
     wage: "$19.40",
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
   },
 ];
+
+export const REGION_AVG = {
+  "Palo Alto": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "Redwood City": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "Mountain View": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "San Francisco": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "Sunnyvale": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+  "Stanford": {
+    waiter_wage: 18,
+    cook_wage: 17,
+    chef_wage: 16,
+    greeter_wage: 17.5
+  },
+
+}

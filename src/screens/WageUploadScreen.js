@@ -39,7 +39,6 @@ const WageUploadScreen = (props) => {
   const [status, setStatus] = useState(1);
 
   let cities = REST_DATA.map((rest) => rest.city);
-  console.log(cities);
   let rest_names = REST_DATA.map((rest) => rest.name);
   cities = [...new Set(cities)];
   rest_names = [...new Set(rest_names)];

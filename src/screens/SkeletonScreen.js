@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import logo from "../img/logo.svg";
+import logoinv from "../img/logo-invert.svg";
 import search from "../img/search.svg";
 
 import "./css/SkeletonScreen.css";
@@ -48,7 +49,7 @@ const SkeletonScreen = (props) => {
       </div>
       <div className="screen-children">{props.children}</div>
       <div className="bottom-bar">
-        <img src={logo} className="small-logo" alt="Wagebase Logo" />
+        <img src={logoinv} className="small-logo" alt="Wagebase Logo" />
         <div className="rights-text">2021 WageBase - All Rights Reserved</div>
       </div>
     </div>

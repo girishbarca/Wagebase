@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import HomeScreen from "./screens/HomeScreen";
 import SearchResultsScreen from "./screens/SearchResultsScreen";
+import CompareScreen from "./screens/CompareScreen";
 import WageUploadScreen from "./screens/WageUploadScreen";
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/share" children={<WageUploadScreen />} />
+          <Route path="/compare" children={<CompareScreen />} />
           <Route
             path="/search/:searchTerm"
             children={<SearchResultsScreen />}
