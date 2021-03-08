@@ -101,7 +101,7 @@ const RestaurantSnippet = (props) => {
   return (
     <div className="restaurant-snippet">
       <img src={imgurl} className="restaurant-snippet-img" alt="Saljuk's Mom" />
-      <div className="restaurant-name">
+      <div className="shaded-restaurant-name">
         {name}
       </div>
       <div className="remove-button custom-btn" onClick={() => props.removeRest(props.idx)}>
