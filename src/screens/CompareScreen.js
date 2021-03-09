@@ -11,7 +11,6 @@ import { REST_DATA } from "../data/mock";
 import "./css/CompareScreen.css";
 import "../common.css";
 
-
 const CompSideBar = (props) => {
   const [restName, setRestName] = useState("");
   const [location, setLocation] = useState("");
@@ -64,9 +63,9 @@ const CompSideBar = (props) => {
           className="custom-btn custom-btn-primary btn-stretch"
           onClick={() => {
             if (restName && location) {
-              props.addRestaurant(restName, location)
-              setRestName("")
-              setLocation("")
+              props.addRestaurant(restName, location);
+              setRestName("");
+              setLocation("");
             }
           }}
         >
@@ -76,22 +75,20 @@ const CompSideBar = (props) => {
       <div className="restaurant-snippet-list">
         <div className="rest-comp-header">Restaurants Being Compared</div>
         <div className="rest-comp-list">
-          {
-            props.rests.map(
-              (rest, idx) => {
-                return (
-                  <RestaurantSnippet name={rest.name} imgurl={rest.imgurl}
-                    removeRest={() => props.removeRest(idx)}
-                  />
-                )
-              }
-            )
-          }
+          {props.rests.map((rest, idx) => {
+            return (
+              <RestaurantSnippet
+                name={rest.name}
+                imgurl={rest.imgurl}
+                removeRest={() => props.removeRest(idx)}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const RestaurantSnippet = (props) => {
   const imgurl =
@@ -101,10 +98,11 @@ const RestaurantSnippet = (props) => {
   return (
     <div className="restaurant-snippet">
       <img src={imgurl} className="restaurant-snippet-img" alt="Saljuk's Mom" />
-      <div className="shaded-restaurant-name">
-        {name}
-      </div>
-      <div className="remove-button custom-btn" onClick={() => props.removeRest(props.idx)}>
+      <div className="shaded-restaurant-name">{name}</div>
+      <div
+        className="remove-button custom-btn"
+        onClick={() => props.removeRest(props.idx)}
+      >
         <img src={remove} className="remove-img" alt="Saljuk's Mom" />
       </div>
     </div>
@@ -115,9 +113,7 @@ const EmptyCompScreen = (props) => {
   return (
     <div className="empty-comp">
       <div className="empty-comp-holder">
-        <div className="empty-comp-header">
-          Compare Restaurants
-        </div>
+        <div className="empty-comp-header">Compare Restaurants</div>
         <div className="empty-comp-desc">
           Add up to 4 restaurants to compare their wage practices simultaneously
         </div>
@@ -128,16 +124,19 @@ const EmptyCompScreen = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const CompareScreen = (props) => {
   const [curRests, setRests] = useState([]);
 
   const removeRest = (idx) => {
-    setRests(curRests.filter((value, index, arr) => {return index !== idx}))
-
-  }
+    setRests(
+      curRests.filter((value, index, arr) => {
+        return index !== idx;
+      })
+    );
+  };
 
   const addRest = (restName, city) => {
     let foundrest;
@@ -147,23 +146,27 @@ const CompareScreen = (props) => {
       }
     }
     if (foundrest) {
-      setRests(curRests.concat([foundrest])) 
+      setRests(curRests.concat([foundrest]));
     }
-  }
+  };
 
   return (
     <SkeletonScreen>
       <div className="comp-master">
         <CompSideBar
-          rests={curRests} removeRest={removeRest}
+          rests={curRests}
+          removeRest={removeRest}
           addRestaurant={addRest}
         />
-        <div className="graph-div">
-          {
-            curRests.length > 0
-            ? <ShareableGraph restaurants={curRests}/>
-            : <EmptyCompScreen/>
-          }
+        <div
+          className="graph-div"
+          style={curRests.length > 0 ? { padding: "4em" } : { padding: "2em" }}
+        >
+          {curRests.length > 0 ? (
+            <ShareableGraph restaurants={curRests} />
+          ) : (
+            <EmptyCompScreen />
+          )}
         </div>
       </div>
     </SkeletonScreen>
@@ -179,7 +182,7 @@ const inputStyles = {
   borderRadius: 5,
   padding: "1px 10px",
   width: "100%",
-  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)"
+  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)",
 };
 
 export default CompareScreen;

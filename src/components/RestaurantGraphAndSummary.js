@@ -4,13 +4,17 @@ import { Col, Row } from "react-bootstrap";
 import RestaurantWageSummary from "../components/RestaurantWageSummary";
 
 import "./css/RestaurantGraphAndSummary.css";
+import ShareableGraph from "./ShareableGraph";
 
 const RestaurantGraphAndSummary = (props) => {
+  const graphProps = { addMarginTop: true, restaurants: [{ ...props }] };
+
   return (
     <Row>
       <Col xs={12} md={8}>
-        {/*---remove placeholder and insert graph component---*/}
-        <div className="graph-placeholder"></div>
+        <div className="restaurant-graph-div">
+          <ShareableGraph {...graphProps} />
+        </div>
       </Col>
       <Col xs={12} md={4}>
         <RestaurantWageSummary {...props} />

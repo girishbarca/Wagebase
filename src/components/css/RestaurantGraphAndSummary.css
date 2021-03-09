@@ -1,5 +1,4 @@
-.graph-placeholder {
-    background-color: gray;
-    height: 850px;
-    margin: 5em 2em 5em 3em;
+.restaurant-graph-div {
+  height: 800px;
+  margin: 7em 2em 5em 3em;
 }
