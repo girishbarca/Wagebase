@@ -19,7 +19,10 @@ const SkeletonScreen = (props) => {
 
   return (
     <div className="full-screen">
-      <div className="top-search-bar">
+      <div
+        className="top-search-bar"
+        style={props.hideNavBar ? { display: "none" } : {}}
+      >
         <div className="logo-holder">
           <Link to="/">
             <img src={logo} className="small-logo" alt="Wagebase Logo" />

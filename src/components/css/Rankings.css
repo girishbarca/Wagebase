@@ -1,0 +1,83 @@
+.rankings-container {
+  padding: 5em;
+  color: white;
+  text-align: center;
+}
+
+.rankings-header {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 48px;
+  border: 5px solid white;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0 5em 0 5em;
+}
+
+.rankings-dropdown-selector {
+  margin: 0 0.5em;
+  font-size: 18px;
+  background-color: #28afb0;
+  color: white;
+  border-color: white;
+}
+
+.rankings-location-selector-container {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 18px;
+}
+
+.rankings-type-selector-container {
+  margin-top: 5em;
+}
+
+.dropdown-large {
+  font-size: 24px;
+  /* padding: 0.2em 1em; */
+}
+
+.left-align {
+  justify-content: left;
+}
+
+select {
+  /* width: 2px; */
+  padding: 0.1em 3em 0.1em 1em;
+  font-size: 16px;
+  text-align: left;
+  background: url("../../img/downarrow-icon.png") no-repeat right #ddd;
+  -webkit-appearance: none;
+  background-position-x: 90%;
+}
+
+.rankings-table {
+  margin: 0 auto;
+  width: 30%;
+  text-align: left;
+  font-size: 24px;
+}
+
+.rankings-table td {
+  padding: 0.5em 0.2em 0em 0;
+}
+
+.rankings-number {
+  width: 10%;
+}
+
+.rankings-wage {
+  width: 10%;
+}
+
+.rankings-name {
+  width: 50%;
+}
+
+.rankings-table-container {
+  margin-top: 2em;
+}
+
+.rankings-share-container {
+  margin-top: 3em;
+}

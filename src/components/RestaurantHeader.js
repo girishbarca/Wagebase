@@ -1,5 +1,6 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import "./css/RestaurantHeader.css";
 import "../common.css";
@@ -23,9 +24,11 @@ const RestaurantHeader = (props) => {
           Bookmark
         </div>
         <div className="spacer"></div>
-        <div className="custom-btn custom-btn-secondary custom-btn-extra-large">
-          Compare
-        </div>
+        <Link to="/compare">
+          <div className="custom-btn custom-btn-secondary custom-btn-extra-large">
+            Compare
+          </div>
+        </Link>
       </Col>
     </div>
   );
