@@ -81,3 +81,9 @@ select {
 .rankings-share-container {
   margin-top: 3em;
 }
+
+.ranking-link {
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}

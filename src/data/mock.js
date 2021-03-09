@@ -336,37 +336,108 @@ export const REGION_AVG = {
     waiter_wage: 18,
     cook_wage: 17,
     chef_wage: 16,
-    greeter_wage: 17.5
+    greeter_wage: 17.5,
   },
   "Redwood City": {
     waiter_wage: 18,
     cook_wage: 17,
     chef_wage: 16,
-    greeter_wage: 17.5
+    greeter_wage: 17.5,
   },
   "Mountain View": {
     waiter_wage: 18,
     cook_wage: 17,
     chef_wage: 16,
-    greeter_wage: 17.5
+    greeter_wage: 17.5,
   },
   "San Francisco": {
     waiter_wage: 18,
     cook_wage: 17,
     chef_wage: 16,
-    greeter_wage: 17.5
+    greeter_wage: 17.5,
   },
-  "Sunnyvale": {
+  Sunnyvale: {
     waiter_wage: 18,
     cook_wage: 17,
     chef_wage: 16,
-    greeter_wage: 17.5
+    greeter_wage: 17.5,
   },
-  "Stanford": {
+  Stanford: {
     waiter_wage: 18,
     cook_wage: 17,
     chef_wage: 16,
-    greeter_wage: 17.5
+    greeter_wage: 17.5,
   },
+};
 
-}
+export const RANKINGS_DATA = {
+  "Palo Alto": {
+    "Top 5 Highest Paying": [
+      { number: 1, name: "Pizza Palace", wage: "$23.40/hr", restaurantID: 2 },
+      { number: 2, name: "Pizza Papa", wage: "$22.40/hr", restaurantID: 1 },
+      { number: 3, name: "Dominoes Pizza", wage: "$19.40/hr", restaurantID: 5 },
+      { number: 4, name: "Pizza Pizza", wage: "$18.40/hr", restaurantID: 0 },
+      { number: 5, name: "Pizza Parlor", wage: "$15.40/hr", restaurantID: 4 },
+    ],
+    "Top 5 Lowest Paying": [
+      { number: 1, name: "Pizzerio", wage: "$14.40/hr", restaurantID: 3 },
+      { number: 2, name: "Pizza Parlor", wage: "$15.40/hr", restaurantID: 4 },
+      { number: 3, name: "Pizza Pizza", wage: "$18.40/hr", restaurantID: 0 },
+      { number: 4, name: "Dominoes Pizza", wage: "$19.40/hr", restaurantID: 5 },
+      { number: 5, name: "Pizza Papa", wage: "$22.40/hr", restaurantID: 1 },
+    ],
+    "Top 5 on Yelp": [
+      { number: 1, name: "Dominoes Pizza", wage: "$19.40/hr", restaurantID: 5 },
+      { number: 2, name: "Pizza Parlor", wage: "$15.40/hr", restaurantID: 4 },
+      { number: 3, name: "Pizza Papa", wage: "$22.40/hr", restaurantID: 1 },
+      { number: 4, name: "Pizza Palace", wage: "$23.40/hr", restaurantID: 2 },
+      { number: 5, name: "Pizza Pizza", wage: "$18.40/hr", restaurantID: 0 },
+    ],
+  },
+  "Menlo Park": {
+    "Top 5 Highest Paying": [
+      { number: 1, name: "Pizza Palace", wage: "$23.40/hr", restaurantID: 2 },
+      { number: 2, name: "Pizza Papa", wage: "$22.40/hr", restaurantID: 1 },
+      { number: 3, name: "Dominoes Pizza", wage: "$19.40/hr", restaurantID: 5 },
+      { number: 4, name: "Pizza Pizza", wage: "$18.40/hr", restaurantID: 0 },
+      { number: 5, name: "Pizza Parlor", wage: "$15.40/hr", restaurantID: 4 },
+    ],
+    "Top 5 Lowest Paying": [
+      { number: 1, name: "Pizzerio", wage: "$14.40/hr", restaurantID: 3 },
+      { number: 2, name: "Pizza Parlor", wage: "$15.40/hr", restaurantID: 4 },
+      { number: 3, name: "Pizza Pizza", wage: "$18.40/hr", restaurantID: 0 },
+      { number: 4, name: "Dominoes Pizza", wage: "$19.40/hr", restaurantID: 5 },
+      { number: 5, name: "Pizza Papa", wage: "$22.40/hr", restaurantID: 1 },
+    ],
+    "Top 5 on Yelp": [
+      { number: 1, name: "Dominoes Pizza", wage: "$19.40/hr", restaurantID: 5 },
+      { number: 2, name: "Pizza Parlor", wage: "$15.40/hr", restaurantID: 4 },
+      { number: 3, name: "Pizza Papa", wage: "$22.40/hr", restaurantID: 1 },
+      { number: 4, name: "Pizza Palace", wage: "$23.40/hr", restaurantID: 2 },
+      { number: 5, name: "Pizza Pizza", wage: "$18.40/hr", restaurantID: 0 },
+    ],
+  },
+  "Mountain View": {
+    "Top 5 Highest Paying": [
+      { number: 1, name: "Pizza Palace", wage: "$23.40/hr", restaurantID: 2 },
+      { number: 2, name: "Pizza Papa", wage: "$22.40/hr", restaurantID: 1 },
+      { number: 3, name: "Dominoes Pizza", wage: "$19.40/hr", restaurantID: 5 },
+      { number: 4, name: "Pizza Pizza", wage: "$18.40/hr", restaurantID: 0 },
+      { number: 5, name: "Pizza Parlor", wage: "$15.40/hr", restaurantID: 4 },
+    ],
+    "Top 5 Lowest Paying": [
+      { number: 1, name: "Pizzerio", wage: "$14.40/hr", restaurantID: 3 },
+      { number: 2, name: "Pizza Parlor", wage: "$15.40/hr", restaurantID: 4 },
+      { number: 3, name: "Pizza Pizza", wage: "$18.40/hr", restaurantID: 0 },
+      { number: 4, name: "Dominoes Pizza", wage: "$19.40/hr", restaurantID: 5 },
+      { number: 5, name: "Pizza Papa", wage: "$22.40/hr", restaurantID: 1 },
+    ],
+    "Top 5 on Yelp": [
+      { number: 1, name: "Dominoes Pizza", wage: "$19.40/hr", restaurantID: 5 },
+      { number: 2, name: "Pizza Parlor", wage: "$15.40/hr", restaurantID: 4 },
+      { number: 3, name: "Pizza Papa", wage: "$22.40/hr", restaurantID: 1 },
+      { number: 4, name: "Pizza Palace", wage: "$23.40/hr", restaurantID: 2 },
+      { number: 5, name: "Pizza Pizza", wage: "$18.40/hr", restaurantID: 0 },
+    ],
+  },
+};

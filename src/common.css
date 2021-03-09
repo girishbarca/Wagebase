@@ -1,82 +1,85 @@
 * {
-    font-family: 'Avenir'
+  font-family: "Avenir";
 }
 
 .custom-btn {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	font-weight: 800;
-	color: white;
-	cursor: pointer;
-	transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .custom-btn-small {
-	border-radius: 4px;
-	font-size: 14px;
-	width: 80px;
-	height: 35px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 80px;
+  height: 35px;
 }
 
 .custom-btn-large {
-	padding: 10px 35px;
-	border-radius: 5px;
-	font-size: 18px;
-	width: 150px;
+  padding: 10px 35px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 150px;
 }
 
 .custom-btn-extra-large {
-	padding: 10px 35px;
-	border-radius: 5px;
-	font-size: 18px;
-	width: 250px;
+  padding: 10px 35px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 250px;
 }
 
 .custom-btn-primary {
-	background: #28AFB0;
+  background: #28afb0;
 }
 
 .custom-btn-secondary {
-	background: #19647E;
+  background: #19647e;
 }
 
 .custom-btn-tertiary {
-	background: #DDCECD;
+  background: #ddcecd;
 }
 
-.custom-btn:hover {opacity: 0.8}
+.custom-btn:hover {
+  opacity: 0.8;
+}
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .standalone-link {
-	text-decoration-line: underline;
-	color: #28AFB0;
-	font-family: Avenir;
-	font-style: normal;
-	font-weight: 800;
-	cursor: pointer;
-	transition: 0.3s;
+  text-decoration-line: underline;
+  color: #28afb0;
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .standalone-link:hover {
-	opacity: 0.8
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .custom-btn-group {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .custom-btn-group > * {
-	margin-right: 5px;
+  margin-right: 5px;
 }
