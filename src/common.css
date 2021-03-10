@@ -51,12 +51,12 @@
 }
 
 .custom-btn-disabled {
-  opacity: 0 !important;
+  opacity: 0.6 !important;
   cursor: default;
 }
 
 .custom-btn-disabled:hover {
-  opacity: 0 !important;
+  opacity: 0.6 !important;
   cursor: default;
 }
 
