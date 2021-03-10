@@ -44,12 +44,13 @@ const ShareableGraph = (props) => {
         <div className="viz-type-label">Visualization Type</div>
         <Dropdown
           options={[
+            "Wages by role | Compared to restaurants nearby",
             "Wages over time | Compared to restaurants nearby",
             "Wages by role | Compared to restaurants nationally",
             "Wages over time | Compared to restaurants nationally",
           ]}
           onChange={this._onSelect}
-          value="Most Relevant"
+          value="Wages by role | Compared to restaurants nearby"
           placeholder="Select an option"
         />
       </div>
@@ -69,7 +70,7 @@ const ShareableGraph = (props) => {
                   display: true,
                   scaleLabel: {
                     display: true,
-                    labelString: "Average Wage",
+                    labelString: "Average Wage ($/hr)",
                   },
                   ticks: {
                     beginAtZero: true,

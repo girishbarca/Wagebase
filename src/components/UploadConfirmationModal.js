@@ -16,10 +16,10 @@ const UploadConfirmationModal = (props) => {
       <img
         src={close}
         className="close-img"
-        alt="Saljuk's Mom"
+        alt="Confirm Modal"
         onClick={props.closeModal}
       />
-      <img src={done} className="confirm-img" alt="Saljuk's Mom" />
+      <img src={done} className="confirm-img" alt="Confirm" />
       <div className="wage-added-text">Your wages have been added!</div>
       <div className="desc-part-i">
         Thank you for helping us in our mission to empower service workers. Your

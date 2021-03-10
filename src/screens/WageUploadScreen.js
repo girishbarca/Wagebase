@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Autocomplete from "react-autocomplete";
+import { Row } from "react-bootstrap";
 
 import waiter from "../img/waiter.svg";
 
@@ -22,12 +23,43 @@ const RestaurantInfo = (props) => {
     "A small scale pizza joint based in Stanford, CA that is popular with the locals. Winner of best pizza pie for the last 3 years in a row.";
   return (
     <div className="restaurant-info-master">
-      <img src={imgurl} className="restaurant-img" alt="Saljuk's Mom" />
+      <img src={imgurl} className="restaurant-img" alt="Restaurant" />
       <div className="restaurant-info-text">
         <div className="restaurant-info-name">{name}</div>
         <div className="restaurant-addr">{addr}</div>
         <div className="restaurant-desc">{desc}</div>
       </div>
+    </div>
+  );
+};
+
+const ProgressBar = (props) => {
+  let first = undefined;
+  let second = undefined;
+  let third = undefined;
+  let progressTitle = undefined;
+
+  if (props.progress >= 1) {
+    first = "bar-filled";
+    progressTitle = "Step 1: Restaurant Details";
+  }
+  if (props.progress >= 2) {
+    second = "bar-filled";
+    progressTitle = "Step 2: Wage Details";
+  }
+  if (props.progress >= 3) {
+    third = "bar-filled";
+    progressTitle = "Step 3: Confirmation";
+  }
+
+  return (
+    <div className="custom-progress-bar">
+      <Row className="bars">
+        <div className={`bar ${first}`}></div>
+        <div className={`bar ${second}`}></div>
+        <div className={`bar ${third}`}></div>
+      </Row>
+      <div className="progress-title">{progressTitle}</div>
     </div>
   );
 };
@@ -57,7 +89,7 @@ const WageUploadScreen = (props) => {
       <div className="wage-upload-inputs">
         <div className="share-wage-header">
           <div className="share-wage-header-text">Share Wages</div>
-          <div className="dumbass-rect" />
+          <ProgressBar {...{ progress: status }} />
         </div>
         <div className="wage-upload-form">
           <div className="input-holder">
@@ -68,7 +100,9 @@ const WageUploadScreen = (props) => {
               renderItem={(item, isHighlighted) => (
                 <div
                   className="dropdownItem"
-                  style={{ background: isHighlighted ? "lightgray" : "white" }}
+                  style={{
+                    background: isHighlighted ? "lightgray" : "white",
+                  }}
                 >
                   {item}
                 </div>
@@ -113,7 +147,7 @@ const WageUploadScreen = (props) => {
         </div>
       </div>
       <div className="person-img-holder">
-        <img src={waiter} className="waiter-img" alt="Saljuk's Mom" />
+        <img src={waiter} className="waiter-img" alt="Waiter Cartoon" />
       </div>
     </div>
   );
@@ -123,7 +157,7 @@ const WageUploadScreen = (props) => {
       <div className="wage-upload-inputs">
         <div className="share-wage-header">
           <div className="share-wage-header-text">Share Wages</div>
-          <div className="smartass-rect" />
+          <ProgressBar {...{ progress: status }} />
         </div>
         <div className="wage-upload-form">
           <div className="input-holder">
@@ -196,14 +230,16 @@ const WageUploadScreen = (props) => {
 };
 
 const inputStyles = {
-  backgroundColor: "#E5E5E5",
+  backgroundColor: "#fafafa",
   fontWeight: 400,
   border: 0,
   minHeight: 40,
-  fontSize: 18,
+  fontSize: "24px",
   borderRadius: 5,
-  padding: "1px 10px",
+  padding: "5px 20px",
   width: "calc(30vw - 20px)",
+  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.1)",
+  borderRadius: "5px",
 };
 
 export default WageUploadScreen;

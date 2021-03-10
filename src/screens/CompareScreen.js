@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import Autocomplete from "react-autocomplete";
+import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import SkeletonScreen from "./SkeletonScreen";
 import ShareableGraph from "../components/ShareableGraph";
@@ -76,17 +78,22 @@ const CompSideBar = (props) => {
       </div>
       <div className="restaurant-snippet-list">
         <div className="rest-comp-header">Restaurants Being Compared</div>
-        <div className="rest-comp-list">
+        <Row xs={1} md={2}>
           {props.rests.map((rest, idx) => {
             return (
               <RestaurantSnippet
                 name={rest.name}
+                paddingClass={idx % 2 ? "noPaddingLeft" : ""}
                 imgurl={rest.imgurl}
+                id={rest.id}
                 removeRest={() => props.removeRest(idx)}
               />
             );
           })}
-        </div>
+        </Row>
+        {/* <div className="rest-comp-list"> */}
+
+        {/* </div> */}
       </div>
     </div>
   );
@@ -98,16 +105,20 @@ const RestaurantSnippet = (props) => {
     "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80";
   const name = props.name || "Pizza Pizza";
   return (
-    <div className="restaurant-snippet">
-      <img src={imgurl} className="restaurant-snippet-img" alt="Saljuk's Mom" />
-      <div className="shaded-restaurant-name">{name}</div>
-      <div
-        className="remove-button custom-btn"
-        onClick={() => props.removeRest(props.idx)}
-      >
-        <img src={remove} className="remove-img" alt="Saljuk's Mom" />
+    <Col xs={12} md={6} className={props.paddingClass}>
+      <div className="restaurant-snippet">
+        <Link to={`/restaurant/${props.id}`}>
+          <img src={imgurl} className="restaurant-snippet-img" alt={name} />
+          <div className="shaded-restaurant-name">{name}</div>
+        </Link>
+        <div
+          className="remove-button custom-btn"
+          onClick={() => props.removeRest(props.idx)}
+        >
+          <img src={remove} className="remove-img" alt="Remove" />
+        </div>
       </div>
-    </div>
+    </Col>
   );
 };
 
