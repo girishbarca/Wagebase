@@ -23,6 +23,9 @@ const HomeScreen = (props) => {
       <div className="home-screen">
         <div className="logo-holder">
           <img src={logo} className="home-logo" alt="Wagebase Logo" />
+          <p className="home-value-prop">
+            Democratizing service worker wage Information
+          </p>
         </div>
         <form className="search-form" onSubmit={(e) => handleSubmit(e)}>
           <div className="search-bar">

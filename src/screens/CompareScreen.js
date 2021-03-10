@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Autocomplete from "react-autocomplete";
 
 import SkeletonScreen from "./SkeletonScreen";
@@ -7,6 +7,8 @@ import ShareableGraph from "../components/ShareableGraph";
 import remove from "../img/remove.svg";
 
 import { REST_DATA } from "../data/mock";
+
+import { UserContext } from "../context";
 
 import "./css/CompareScreen.css";
 import "../common.css";
@@ -128,11 +130,12 @@ const EmptyCompScreen = (props) => {
 };
 
 const CompareScreen = (props) => {
-  const [curRests, setRests] = useState([]);
+  const user = useContext(UserContext);
+  const { currRests, setCurrRests } = user;
 
   const removeRest = (idx) => {
-    setRests(
-      curRests.filter((value, index, arr) => {
+    setCurrRests(
+      currRests.filter((value, index, arr) => {
         return index !== idx;
       })
     );
@@ -146,7 +149,7 @@ const CompareScreen = (props) => {
       }
     }
     if (foundrest) {
-      setRests(curRests.concat([foundrest]));
+      setCurrRests(currRests.concat([foundrest]));
     }
   };
 
@@ -154,16 +157,16 @@ const CompareScreen = (props) => {
     <SkeletonScreen>
       <div className="comp-master">
         <CompSideBar
-          rests={curRests}
+          rests={currRests}
           removeRest={removeRest}
           addRestaurant={addRest}
         />
         <div
           className="graph-div"
-          style={curRests.length > 0 ? { padding: "4em" } : { padding: "2em" }}
+          style={currRests.length > 0 ? { padding: "4em" } : { padding: "2em" }}
         >
-          {curRests.length > 0 ? (
-            <ShareableGraph restaurants={curRests} />
+          {currRests.length > 0 ? (
+            <ShareableGraph restaurants={currRests} />
           ) : (
             <EmptyCompScreen />
           )}

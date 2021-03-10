@@ -16,7 +16,7 @@
 .custom-btn-small {
   border-radius: 4px;
   font-size: 14px;
-  width: 80px;
+  width: 98px;
   height: 35px;
 }
 
@@ -44,6 +44,20 @@
 
 .custom-btn-tertiary {
   background: #ddcecd;
+}
+
+.custom-btn-alert {
+  background: #d85e5e;
+}
+
+.custom-btn-disabled {
+  opacity: 0 !important;
+  cursor: default;
+}
+
+.custom-btn-disabled:hover {
+  opacity: 0 !important;
+  cursor: default;
 }
 
 .custom-btn:hover {
