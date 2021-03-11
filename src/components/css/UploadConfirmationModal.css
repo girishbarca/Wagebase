@@ -1,60 +1,60 @@
 .confirm-modal-master {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 40vw;
-	background-color: #FFFFF8;
-	padding: 50px;
-	border-radius: 5px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  background-color: #fafafa;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .close-img {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	cursor: pointer;
-	width: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  width: 20px;
 }
 
 .confirm-img {
-	width: 80px;
-	flex: 1;
-	margin-bottom: 20px;
+  width: 80px;
+  flex: 1;
+  margin-bottom: 20px;
 }
 
 .wage-added-text {
-	font-weight: 900;
-	font-size: 24px;
-	flex: 2;
-	margin-bottom: 15px;
+  font-weight: 900;
+  font-size: 24px;
+  flex: 2;
+  margin-bottom: 15px;
 }
 
 .desc-part-i {
-	text-align: center;
-	margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .desc-part-ii {
-	text-align: center;
-	margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .email-confirm-form {
-	display: flex;
-	flex-direction: row;
-	align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 .email-input {
-	background-color: #E5E5E5;
-	font-weight: 400;
-	border: 0;
-	font-size: 14px;
-	border-radius: 5px;
-	margin-right: 5px;
-	padding: 5px 10px;
-	min-width: 300px;
-	max-width: 30vw;
+  background-color: #e5e5e5;
+  font-weight: 400;
+  border: 0;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  min-width: 300px;
+  max-width: 30vw;
 }

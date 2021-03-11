@@ -25,7 +25,7 @@ const RestaurantInfo = (props) => {
   const wage = props.wage || "$18.42";
   return (
     <div
-      className="restaurant-info-master"
+      className="search-restaurant-info-master"
       style={{
         flexDirection: "row",
         height: "30vh",

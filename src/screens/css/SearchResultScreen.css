@@ -124,7 +124,7 @@
   height: 100%;
 }
 
-.restaurant-info-master {
+.search-restaurant-info-master {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -134,13 +134,13 @@
   flex: 1;
 }
 
-.restaurant-info-master .restaurant-img {
+.search-restaurant-info-master .restaurant-img {
   border-radius: 5px;
   width: 100px;
   height: auto;
 }
 
-.restaurant-info-master .restaurant-info-text {
+.search-restaurant-info-master .restaurant-info-text {
   display: flex;
   flex-direction: column;
   justify-content: center;

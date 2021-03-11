@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Autocomplete from "react-autocomplete";
+import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import SkeletonScreen from "./SkeletonScreen";
 import ShareableGraph from "../components/ShareableGraph";
@@ -7,6 +9,8 @@ import ShareableGraph from "../components/ShareableGraph";
 import remove from "../img/remove.svg";
 
 import { REST_DATA } from "../data/mock";
+
+import { UserContext } from "../context";
 
 import "./css/CompareScreen.css";
 import "../common.css";
@@ -41,7 +45,7 @@ const CompSideBar = (props) => {
           />
         </div>
         <div className="input-holder">
-          <div className="input-label">Location (Optional)</div>
+          <div className="input-label">Location</div>
           <Autocomplete
             getItemValue={(item) => item}
             items={cities}
@@ -74,17 +78,22 @@ const CompSideBar = (props) => {
       </div>
       <div className="restaurant-snippet-list">
         <div className="rest-comp-header">Restaurants Being Compared</div>
-        <div className="rest-comp-list">
+        <Row xs={1} md={2}>
           {props.rests.map((rest, idx) => {
             return (
               <RestaurantSnippet
                 name={rest.name}
+                paddingClass={idx % 2 ? "noPaddingLeft" : ""}
                 imgurl={rest.imgurl}
+                id={rest.id}
                 removeRest={() => props.removeRest(idx)}
               />
             );
           })}
-        </div>
+        </Row>
+        {/* <div className="rest-comp-list"> */}
+
+        {/* </div> */}
       </div>
     </div>
   );
@@ -96,16 +105,20 @@ const RestaurantSnippet = (props) => {
     "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80";
   const name = props.name || "Pizza Pizza";
   return (
-    <div className="restaurant-snippet">
-      <img src={imgurl} className="restaurant-snippet-img" alt="Saljuk's Mom" />
-      <div className="shaded-restaurant-name">{name}</div>
-      <div
-        className="remove-button custom-btn"
-        onClick={() => props.removeRest(props.idx)}
-      >
-        <img src={remove} className="remove-img" alt="Saljuk's Mom" />
+    <Col xs={12} md={6} className={props.paddingClass}>
+      <div className="restaurant-snippet">
+        <Link to={`/restaurant/${props.id}`}>
+          <img src={imgurl} className="restaurant-snippet-img" alt={name} />
+          <div className="shaded-restaurant-name">{name}</div>
+        </Link>
+        <div
+          className="remove-button custom-btn"
+          onClick={() => props.removeRest(props.idx)}
+        >
+          <img src={remove} className="remove-img" alt="Remove" />
+        </div>
       </div>
-    </div>
+    </Col>
   );
 };
 
@@ -128,11 +141,12 @@ const EmptyCompScreen = (props) => {
 };
 
 const CompareScreen = (props) => {
-  const [curRests, setRests] = useState([]);
+  const user = useContext(UserContext);
+  const { currRests, setCurrRests } = user;
 
   const removeRest = (idx) => {
-    setRests(
-      curRests.filter((value, index, arr) => {
+    setCurrRests(
+      currRests.filter((value, index, arr) => {
         return index !== idx;
       })
     );
@@ -146,7 +160,7 @@ const CompareScreen = (props) => {
       }
     }
     if (foundrest) {
-      setRests(curRests.concat([foundrest]));
+      setCurrRests(currRests.concat([foundrest]));
     }
   };
 
@@ -154,16 +168,16 @@ const CompareScreen = (props) => {
     <SkeletonScreen>
       <div className="comp-master">
         <CompSideBar
-          rests={curRests}
+          rests={currRests}
           removeRest={removeRest}
           addRestaurant={addRest}
         />
         <div
           className="graph-div"
-          style={curRests.length > 0 ? { padding: "4em" } : { padding: "2em" }}
+          style={currRests.length > 0 ? { padding: "4em" } : { padding: "2em" }}
         >
-          {curRests.length > 0 ? (
-            <ShareableGraph restaurants={curRests} />
+          {currRests.length > 0 ? (
+            <ShareableGraph restaurants={currRests} />
           ) : (
             <EmptyCompScreen />
           )}

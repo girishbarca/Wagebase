@@ -1,177 +1,289 @@
 .wage-upload-master {
-	width: 100%;
-	min-height: 100%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+  min-height: 90vh;
 }
 
 .wage-upload-inputs {
-	flex: 1.8;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 50vh;
+  padding: 5% 0 5% 10% !important;
+  height: fit-content;
+}
+
+.waiter-img {
+  padding: 0 20%;
 }
 
 .share-wage-header {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	width: 30vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 30vw;
 }
 
 .share-wage-header-text {
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 48px;
-	margin-bottom: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-.dumbass-rect {
-	background: linear-gradient(90deg, #28AFB0 50%, #FAFAFA 50%);
-	width: 330px;
-	height: 10px;
+.bar {
+  width: 110px;
+  height: 10px;
+  background: #eee5e5;
+  margin: 0 1px;
 }
 
-.smartass-rect {
-	background: #28AFB0;
-	width: 330px;
-	height: 10px;
+.bar-filled {
+  background: #28afb0;
+}
+
+.progress-title {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.custom-progress-bar {
+  margin-bottom: 50px;
+}
+
+.bars {
+  margin-left: 1px;
 }
 
 .wage-upload-form {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	width: 30vw;
-	flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 30vw;
+  flex: 2;
+  margin-bottom: 50px;
 }
 
 .wage-upload-form .input-holder {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
-	flex: 1;
-	margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  margin-bottom: 20px;
 }
 
 .wage-upload-form .input-holder .input-label {
-	font-style: normal;
-	font-weight: 300;
-	font-size: 18px;
-	color: rgba(0, 0, 0, 0.7);
-	margin-bottom: 5px;
-	margin-left: 10px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 5px;
+  margin-left: 10px;
 }
 
 .wage-upload-form .input-holder .wage-input {
-	background-color: #E5E5E5;
-	width: 100%;
-	font-weight: 400;
-	border: 0;
-	min-height: 40px;
-	font-size: 18px;
-	border-radius: 5px;
-	padding: 0px 5px;
-	width: calc(30vw - 20px);
-	border-radius: 5px;
-	margin-right: 10px;
+  width: 100%;
+  border: 0;
+  margin-right: 10px;
+  background-color: #fafafa;
+  font-weight: 400;
+  border: 0;
+  min-height: 40px;
+  font-size: 24px;
+  border-radius: 5;
+  padding: 5px 20px;
+  width: calc(30vw - 20px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .wage-input-bar {
-	width: 50%;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	background-color: #E5E5E5;
-	border-radius: 5px;
-	margin-right: 10px;
+  width: 30%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start !important;
+  border-radius: 5px;
+}
+
+.wage-input::placeholder {
+  opacity: 0.5;
+  font-size: 18px;
+}
+
+.email-holder {
+  margin-top: 10px;
 }
 
 .dollar-sign {
-	color: #37392E;
-	opacity: 0.5;
-	font-weight: 300;
-	font-size: 18px;
-	padding: 0px 2px 0px 10px;
+  position: absolute;
+  display: block;
+  top: 7px;
+  color: #37392e;
+  padding-left: 5px;
+  width: 45px;
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 22px;
+  padding: 0px 10px 0px 10px;
+}
+
+.hour-sign {
+  position: absolute;
+  display: block;
+  top: 6px;
+  right: -10px;
+  color: #37392e;
+  width: 45px;
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 22px;
+  padding: 0px 10px 0px 10px;
+}
+
+.hourly-wage-input {
+  padding-left: 25% !important;
 }
 
 .dropdownItem {
-	padding: 1px 10px;
-	font-size: 14px;
+  padding: 1px 10px;
+  font-size: 14px;
 }
 
 .next-custom-btn-holder {
-	width: 100%;
-	display: flex;
-	flex-direction: row-reverse;
+  width: 96%;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 50px;
+}
+
+.custom-input-field {
+  background: #fafafa !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .person-img-holder {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .restaurant-info-master {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	flex: 1.5;
+  flex-direction: column;
+  flex: 1.5;
+  align-items: flex-start !important;
+  padding-left: 5%;
 }
 
 .restaurant-info-master .restaurant-img {
-	border-radius: 5px;
-	width: 70%;
-	height: auto;
+  border-radius: 5px;
+  width: 70%;
+  object-fit: cover;
+  height: auto;
 }
 
 .restaurant-info-master .restaurant-info-text {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 70%;
 }
 
 .restaurant-info-text .restaurant-info-name {
-	font-weight: 800;
-	font-size: 24px;
-	color: #37392E;
-	opacity: 0.7;
-	margin-top: 20px;
+  font-weight: 800;
+  font-size: 24px;
+  color: #37392e;
+  opacity: 0.7;
+  margin-top: 20px;
 }
 
 .restaurant-info-text .restaurant-addr {
-	font-weight: 500;
-	font-size: 18px;
-	color: #37392E;
-	opacity: 0.7;
-	margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #37392e;
+  opacity: 0.7;
+  margin-bottom: 10px;
 }
 
 .restaurant-info-text .restaurant-desc {
-	font-size: 18px;
-	color: #37392E;
-	opacity: 0.7;
+  font-size: 18px;
+  color: #37392e;
+  opacity: 0.7;
 }
 
 .modal-holder {
-	position: fixed;
-  	top: 50%;
-  	left: 50%;
-  	/* bring your own prefixes */
-  	transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.blur-bg {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.select-wage-role {
+  background: url("../../img/drop-down-arrow-black.png") no-repeat right #ddd;
+  -webkit-appearance: none;
+  background-position-x: 90%;
+}
+
+.section-summary {
+  background-color: #eee5e5;
+  width: 97%;
+  position: relative;
+  height: 26px;
+  border-radius: 5px;
+}
+
+.section-header {
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+  font-size: 14px;
+  top: 3px;
+  left: 15px;
+}
+
+.section-edit-img {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.summary-content {
+  width: 100%;
+  margin: 15px 0px 15px 0;
+}
+
+.summary-label {
+  font-weight: 200;
+  opacity: 0.5;
+  font-size: 12px;
+  margin-left: 0;
+}
+
+.summary-value {
+  font-weight: normal;
+  font-size: 18px;
+  margin-left: 0;
+}
+
+.input-doc {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 10px;
 }
