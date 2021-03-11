@@ -45,7 +45,7 @@ const CompSideBar = (props) => {
           />
         </div>
         <div className="input-holder">
-          <div className="input-label">Location (Optional)</div>
+          <div className="input-label">Location</div>
           <Autocomplete
             getItemValue={(item) => item}
             items={cities}

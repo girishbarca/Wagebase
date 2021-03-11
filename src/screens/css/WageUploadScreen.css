@@ -3,7 +3,7 @@
 }
 
 .wage-upload-inputs {
-  padding-left: 10% !important;
+  padding: 5% 0 5% 10% !important;
   height: fit-content;
 }
 
@@ -107,6 +107,15 @@
   border-radius: 5px;
 }
 
+.wage-input::placeholder {
+  opacity: 0.5;
+  font-size: 18px;
+}
+
+.email-holder {
+  margin-top: 10px;
+}
+
 .dollar-sign {
   position: absolute;
   display: block;
@@ -174,6 +183,7 @@
 .restaurant-info-master .restaurant-img {
   border-radius: 5px;
   width: 70%;
+  object-fit: cover;
   height: auto;
 }
 
@@ -227,4 +237,53 @@
   background: url("../../img/drop-down-arrow-black.png") no-repeat right #ddd;
   -webkit-appearance: none;
   background-position-x: 90%;
+}
+
+.section-summary {
+  background-color: #eee5e5;
+  width: 97%;
+  position: relative;
+  height: 26px;
+  border-radius: 5px;
+}
+
+.section-header {
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+  font-size: 14px;
+  top: 3px;
+  left: 15px;
+}
+
+.section-edit-img {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  cursor: pointer;
+}
+
+.summary-content {
+  width: 100%;
+  margin: 15px 0px 15px 0;
+}
+
+.summary-label {
+  font-weight: 200;
+  opacity: 0.5;
+  font-size: 12px;
+  margin-left: 0;
+}
+
+.summary-value {
+  font-weight: normal;
+  font-size: 18px;
+  margin-left: 0;
+}
+
+.input-doc {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 10px;
 }

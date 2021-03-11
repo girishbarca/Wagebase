@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40vw;
+  width: 50vw;
   background-color: #fafafa;
   padding: 50px;
   border-radius: 5px;
@@ -12,8 +12,8 @@
 
 .close-img {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  right: 30px;
   cursor: pointer;
   width: 20px;
 }
