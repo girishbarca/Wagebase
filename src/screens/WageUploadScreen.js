@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Autocomplete from "react-autocomplete";
-import { Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 import waiter from "../img/waiter.svg";
 
@@ -85,8 +85,8 @@ const WageUploadScreen = (props) => {
   }
 
   const NameLocationComp = (
-    <div className="wage-upload-master">
-      <div className="wage-upload-inputs">
+    <Row className="justify-content-md-center wage-upload-master">
+      <Col md={6} className="wage-upload-inputs">
         <div className="share-wage-header">
           <div className="share-wage-header-text">Share Wages</div>
           <ProgressBar {...{ progress: status }} />
@@ -145,16 +145,16 @@ const WageUploadScreen = (props) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="person-img-holder">
+      </Col>
+      <Col md={6}>
         <img src={waiter} className="waiter-img" alt="Waiter Cartoon" />
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 
   const WageComp = (
-    <div className="wage-upload-master">
-      <div className="wage-upload-inputs">
+    <Row className={`wage-upload-master ${status === 3 ? "blur-bg" : ""}`}>
+      <Col md={6} className="wage-upload-inputs">
         <div className="share-wage-header">
           <div className="share-wage-header-text">Share Wages</div>
           <ProgressBar {...{ progress: status }} />
@@ -162,7 +162,7 @@ const WageUploadScreen = (props) => {
         <div className="wage-upload-form">
           <div className="input-holder">
             <div className="input-label">Role</div>
-            <select className="wage-input">
+            <select className="wage-input select-wage-role">
               <option value="waiter">Waiter</option>
               <option value="line-cook">Line Cook</option>
               <option value="chef">Chef</option>
@@ -172,13 +172,15 @@ const WageUploadScreen = (props) => {
           <div className="input-holder">
             <div className="input-label">Hourly Wages</div>
             <div className="wage-input-bar">
-              <div className="dollar-sign"> $ </div>
+              <span className="dollar-sign"> $ </span>
               <input
-                className="wage-input"
+                className="wage-input hourly-wage-input"
+                min="0"
                 type="number"
                 value={wage}
                 onChange={(e) => setWage(e.target.value)}
               />
+              <span className="hour-sign">/hr</span>
             </div>
           </div>
           <div className="next-custom-btn-holder">
@@ -202,13 +204,15 @@ const WageUploadScreen = (props) => {
             </div>
           </div>
         </div>
-      </div>
-      <RestaurantInfo
-        name={curRest.name}
-        addr={curRest.addr}
-        desc={curRest.desc}
-      />
-    </div>
+      </Col>
+      <Col xs={6}>
+        <RestaurantInfo
+          name={curRest.name}
+          addr={curRest.addr}
+          desc={curRest.desc}
+        />
+      </Col>
+    </Row>
   );
 
   return (

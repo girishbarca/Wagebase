@@ -1,23 +1,14 @@
 .wage-upload-master {
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  min-height: 90vh;
 }
 
 .wage-upload-inputs {
-  flex: 1.8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 50vh;
+  padding-left: 10% !important;
+  height: fit-content;
 }
 
 .waiter-img {
-  padding-top: 50px;
-  padding-right: 200px;
+  padding: 0 20%;
 }
 
 .share-wage-header {
@@ -91,36 +82,59 @@
 }
 
 .wage-upload-form .input-holder .wage-input {
-  background-color: #e5e5e5;
   width: 100%;
+  border: 0;
+  margin-right: 10px;
+  background-color: #fafafa;
   font-weight: 400;
   border: 0;
   min-height: 40px;
-  font-size: 18px;
-  border-radius: 5px;
-  padding: 0px 5px;
+  font-size: 24px;
+  border-radius: 5;
+  padding: 5px 20px;
   width: calc(30vw - 20px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  margin-right: 10px;
 }
 
 .wage-input-bar {
-  width: 50%;
+  width: 30%;
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  background-color: #e5e5e5;
+  justify-content: flex-start !important;
   border-radius: 5px;
-  margin-right: 10px;
 }
 
 .dollar-sign {
+  position: absolute;
+  display: block;
+  top: 7px;
   color: #37392e;
+  padding-left: 5px;
+  width: 45px;
   opacity: 0.5;
   font-weight: 300;
-  font-size: 18px;
-  padding: 0px 2px 0px 10px;
+  font-size: 22px;
+  padding: 0px 10px 0px 10px;
+}
+
+.hour-sign {
+  position: absolute;
+  display: block;
+  top: 6px;
+  right: -10px;
+  color: #37392e;
+  width: 45px;
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 22px;
+  padding: 0px 10px 0px 10px;
+}
+
+.hourly-wage-input {
+  padding-left: 25% !important;
 }
 
 .dropdownItem {
@@ -151,11 +165,10 @@
 }
 
 .restaurant-info-master {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   flex: 1.5;
+  align-items: flex-start !important;
+  padding-left: 5%;
 }
 
 .restaurant-info-master .restaurant-img {
@@ -200,4 +213,18 @@
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+}
+
+.blur-bg {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.select-wage-role {
+  background: url("../../img/drop-down-arrow-black.png") no-repeat right #ddd;
+  -webkit-appearance: none;
+  background-position-x: 90%;
 }
